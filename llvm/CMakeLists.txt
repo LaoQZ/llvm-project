@@ -891,7 +891,7 @@ if(APPLE AND DARWIN_LTO_LIBRARY)
   set(CMAKE_MODULE_LINKER_FLAGS
     "${CMAKE_MODULE_LINKER_FLAGS} -Wl,-lto_library -Wl,${DARWIN_LTO_LIBRARY}")
 endif()
-
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -lboost_locale")
 # Build with _XOPEN_SOURCE on AIX, as stray macros in _ALL_SOURCE mode tend to
 # break things. In this case we need to enable the large-file API as well.
 if (UNIX AND ${CMAKE_SYSTEM_NAME} MATCHES "AIX")

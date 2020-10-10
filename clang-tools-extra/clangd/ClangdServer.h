@@ -386,6 +386,7 @@ private:
   // ClangdServer.
   TUScheduler WorkScheduler;
 };
+bool isValidUtf8(const std::string &Stdstring);
 
 } // namespace clangd
 } // namespace clang
